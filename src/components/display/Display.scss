@@ -1,0 +1,6 @@
+@use "../../scss/variables.scss" as v;
+.display {
+  width: 100%;
+  background-color: white;
+  font-family: v.$font;
+}

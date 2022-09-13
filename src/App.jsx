@@ -1,15 +1,11 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.scss'
+import { useState } from "react";
+import "./App.scss";
+import { Calculator } from "./components/calculator/Calculator";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export const App = () => {
   return (
-    <div className='app'>
-      <p className='text'>ik</p>
-    </div>
-  )
-}
-
-export default App
+    <>
+      <Calculator />
+    </>
+  );
+};

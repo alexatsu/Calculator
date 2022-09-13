@@ -1,0 +1,27 @@
+@use "../../scss/variables.scss" as v;
+.nav {
+  height: 50px;
+  width: 100%;
+  color: hsl(0, 0, 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  .calc-text {
+    color: white;
+    font-family: v.$font;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .theme {
+    display: flex;
+    align-items: flex-end;
+    font-family: v.$font;
+    .theme-text {
+      padding-right: 10px;
+      font-family: v.$font;
+      font-size: 0.7rem;
+      font-weight: 700;
+    }
+  }
+}
