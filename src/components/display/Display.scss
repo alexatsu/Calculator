@@ -1,15 +1,20 @@
 @use "../../scss/variables.scss" as v;
 .display {
-  width: 90%;
-  background-color: white;
-  height: 60px;
-  border-radius: 5px;
+  width: 100%;
+  background-color: var(--display-bg);
+  height: 75px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  margin-top: 20px;
   .numbers {
-    font-size: 2rem;
+    font-size: 1.9rem;
     font-family: v.$font;
     padding-right: 20px;
+    color: var(--white);
+    font-weight: 700;
+    margin-top: 5px;
+    letter-spacing: 1px;
   }
 }

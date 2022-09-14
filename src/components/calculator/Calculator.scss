@@ -1,9 +1,5 @@
+@use "../../scss/variables.scss" as v;
 .calc {
-  background-color: hsl(223, 31%, 20%);
   height: 500px;
-  width: 300px;
-  .display {
-    margin: auto;
-    margin-top: 20px;
-  }
+  width: 330px;
 }

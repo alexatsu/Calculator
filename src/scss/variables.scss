@@ -1,3 +1,56 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan&display=swap");
 
 $font: "League Spartan", sans-serif;
+
+//Colors
+:root {
+  //Theme 1
+  //Backgrounds
+  --main-bg: hsl(222, 26%, 31%);
+  --toggle-bg: hsl(223, 31%, 20%);
+  --display-bg: hsl(224, 36%, 15%);
+  //Keys
+  --del-key-bg: hsl(225, 21%, 49%);
+  --del-key-shadow: hsl(224, 28%, 35%);
+  --toggle: hsl(6, 63%, 50%);
+  --equal-shadow: hsl(6, 70%, 34%);
+  --numbers-bg: hsl(30, 25%, 89%);
+  --numbers-shadow: hsl(28, 16%, 65%);
+  //Text
+  --numbers-text: hsl(221, 14%, 31%);
+  --white: hsl(0, 0%, 100%);
+}
+:root {
+  //Theme 2
+  //Backgrounds
+  --main-bg-light: hsl(0, 0%, 90%);
+  --toggle-bg-light: hsl(0, 5%, 81%);
+  --display-bg-light: hsl(0, 0%, 93%);
+  //Keys
+  --del-key-bg-light: hsl(185, 42%, 37%);
+  --del-key-shadow-light: hsl(185, 58%, 25%);
+  --toggle-light: hsl(25, 98%, 40%);
+  --equal-shadow-light: hsl(25, 99%, 27%);
+  --numbers-bg-light: hsl(45, 7%, 89%);
+  --numbers-shadow-light: hsl(35, 11%, 61%);
+  //Text
+  --numbers-text-light: hsl(60, 10%, 19%);
+  --white-light: hsl(0, 0%, 100%);
+}
+:root {
+  //Theme 3
+  //Backgrounds
+  --main-bg-dark: hsl(268, 75%, 9%);
+  --toggle-bg-dark: hsl(268, 71%, 12%);
+  --display-bg-dark: hsl(268, 71%, 12%);
+  //Keys
+  --del-key-bg-dark: hsl(281, 89%, 26%);
+  --del-key-shadow-dark: hsl(285, 91%, 52%);
+  --toggle-dark: hsl(176, 100%, 44%);
+  --equal-shadow-dark: hsl(177, 92%, 70%);
+  --numbers-bg-dark: hsl(268, 47%, 21%);
+  --numbers-shadow-dark: hsl(290, 70%, 36%);
+  //Text
+  --numbers-text-dark: hsl(52, 100%, 62%);
+  --white-dark: hsl(0, 0%, 100%);
+}

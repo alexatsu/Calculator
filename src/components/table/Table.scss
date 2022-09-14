@@ -1,0 +1,25 @@
+.table {
+    background-color: var(--toggle-bg);
+    height: 350px;
+    margin-top: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    .sm-btn {
+        height: 300px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        align-self: center;
+        justify-self: center;
+        padding-top: 20px;
+        padding-bottom: 5px;
+        column-gap: 15px;
+        row-gap: 5px;
+    }
+    .long-btn {
+        display: flex;
+        justify-content: center;
+        gap: 13px;
+        padding-bottom: 15px;
+    }
+}

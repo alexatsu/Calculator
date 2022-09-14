@@ -33,7 +33,7 @@ The designs were created to the following widths:
 - Very dark grayish blue: hsl(221, 14%, 31%)
 - White: hsl(0, 0, 100%)
 
-### Theme 2
+<!-- ### Theme 2
 
 #### Backgrounds
 
@@ -90,4 +90,4 @@ The designs were created to the following widths:
 ### Font
 
 - Family: [League Spartan](https://fonts.google.com/specimen/League+Spartan)
-- Weights: 700
+- Weights: 700 -->

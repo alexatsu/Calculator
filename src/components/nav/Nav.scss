@@ -2,15 +2,14 @@
 .nav {
   height: 50px;
   width: 100%;
-  color: hsl(0, 0%, 100%);
+  color: var(--white);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
   .calc-text {
-    color: white;
+    color: var(--white);
     font-family: v.$font;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 700;
   }
   .theme {
@@ -18,10 +17,54 @@
     align-items: flex-end;
     font-family: v.$font;
     .theme-text {
-      padding-right: 10px;
+      padding-right: 25px;
       font-family: v.$font;
       font-size: 0.7rem;
       font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+    .theme-slider {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .nums {
+        font-family: v.$font;
+        letter-spacing: 8px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        padding-bottom: 5px;
+        margin-right: -10px;
+      }
+      .toggle {
+        display: flex;
+        justify-content: center;
+        border-radius: 50px;
+        background-color: var(--toggle-bg);
+        padding: 6px;
+        %themes {
+          height: 15px;
+          width: 15px;
+          appearance: none;
+          background-color: var(--toggle);
+          border-radius: 50%;
+          &:nth-child(-n + 2) {
+            margin-right: 10px;
+          }
+        }
+        .theme-off {
+          @extend %themes;
+          opacity: 0;
+        }
+        .theme-on {
+          @extend %themes;
+          opacity: 1;
+          &:hover {
+            cursor: pointer;
+            background-color: hsl(6, 100%, 62%);
+          }
+        }
+      }
     }
   }
 }
