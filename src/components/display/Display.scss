@@ -1,6 +1,15 @@
 @use "../../scss/variables.scss" as v;
 .display {
-  width: 100%;
+  width: 90%;
   background-color: white;
-  font-family: v.$font;
+  height: 60px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  .numbers {
+    font-size: 2rem;
+    font-family: v.$font;
+    padding-right: 20px;
+  }
 }

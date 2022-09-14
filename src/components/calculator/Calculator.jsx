@@ -7,7 +7,7 @@ export const Calculator = () => {
     <div className="calc">
       <>
         <Nav />
-        <Display />
+        <Display className="display" />
       </>
     </div>
   );
