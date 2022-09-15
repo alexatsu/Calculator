@@ -1,0 +1,54 @@
+.theme1 {
+  //Backgrounds
+  --main-bg: var(--gr-b);
+  --toggle-bg: var(--gr-b2);
+  --display-bg: var(--gr-b3);
+  //Keys
+  --del-key-bg: var(--grayish-b);
+  --del-key-shadow: var(--grayish-b2);
+  --toggle: var(--orange);
+  --equal-shadow: var(--d-orange);
+  --numbers-bg: var(--grayish-l);
+  --numbers-shadow: var(--grayish-l2);
+  //Text
+  --numbers-text: var(--blakish2);
+  --display-text: var(--wh);
+  --white: var(--wh);
+  --equal: var(--wh);
+}
+.theme2 {
+  //Backgrounds
+  --main-bg: var(--g);
+  --toggle-bg: var(--g2);
+  --display-bg: var(--g3);
+  //Keys
+  --del-key-bg: var(--teal);
+  --del-key-shadow: var(--d-teal);
+  --toggle: var(--d-yellow);
+  --equal-shadow: var(--brown);
+  --numbers-bg: var(--gr);
+  --numbers-shadow: var(--gr2);
+  //Text
+  --numbers-text: var(--blakish);
+  --display-text: var(--blakish);
+  --white: var(--wh);
+  --equal: var(--wh);
+}
+.theme3 {
+  //Backgrounds
+  --main-bg: var(--d-p);
+  --toggle-bg: var(--d-p2);
+  --display-bg: var(--d-p3);
+  //Keys
+  --del-key-bg: var(--l-p);
+  --del-key-shadow: var(--vl-p);
+  --toggle: var(--vl-b);
+  --equal-shadow: var(--ul-b);
+  --numbers-bg: var(--vd-p);
+  --numbers-shadow: var(--p);
+  //Text
+  --numbers-text: var(--y);
+  --display-text: var(--y);
+  --white: var(--wh);
+  --equal: var(--eq);
+}

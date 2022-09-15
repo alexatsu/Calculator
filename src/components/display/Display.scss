@@ -1,4 +1,5 @@
 @use "../../scss/variables.scss" as v;
+@use "../../scss/themes.scss" as t;
 .display {
   width: 100%;
   background-color: var(--display-bg);
@@ -12,7 +13,7 @@
     font-size: 1.9rem;
     font-family: v.$font;
     padding-right: 20px;
-    color: var(--white);
+    color: var(--display-text);
     font-weight: 700;
     margin-top: 5px;
     letter-spacing: 1px;

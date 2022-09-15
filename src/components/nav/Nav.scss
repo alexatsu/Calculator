@@ -1,13 +1,14 @@
 @use "../../scss/variables.scss" as v;
+@use "../../scss/themes.scss" as t;
 .nav {
   height: 50px;
   width: 100%;
-  color: var(--white);
+  color: var(--display-text);
   display: flex;
   justify-content: space-between;
   align-items: center;
   .calc-text {
-    color: var(--white);
+    color: var(---display-text);
     font-family: v.$font;
     font-size: 1.8rem;
     font-weight: 700;
