@@ -3,11 +3,11 @@ import { Nav } from "../nav/Nav";
 import { Table } from "../table/Table";
 import "./Calculator.scss";
 
-export const Calculator = ({ themeToggle, setThemeToggle }) => {
+export const Calculator = ({ theme, setTheme }) => {
   return (
     <div className="calc">
       <>
-        <Nav themeToggle={themeToggle} setThemeToggle={setThemeToggle} />
+        <Nav theme={theme} setTheme={setTheme} />
         <Display />
         <Table />
       </>

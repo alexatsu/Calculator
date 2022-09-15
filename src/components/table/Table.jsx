@@ -8,8 +8,8 @@ export const Table = () => {
   return (
     <div className="table">
       <div className="sm-btn">
-        {numbs.map((n) => {
-          return <Btn {...n} />;
+        {numbs.map((n, i) => {
+          return <Btn key={i} {...n} />;
         })}
       </div>
       <div className="long-btn">

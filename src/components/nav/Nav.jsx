@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./Nav.scss";
 
-export const Nav = ({ themeToggle, setThemeToggle }) => {
+export const Nav = ({ theme, setTheme }) => {
+
   const [isActive, setIsActive] = useState(0);
 
   return (
@@ -12,17 +13,18 @@ export const Nav = ({ themeToggle, setThemeToggle }) => {
         <div className="theme-slider">
           <div className="nums">1 2 3</div>
           <div className="toggle">
-            {Array(3)
-              .fill()
+            {Array.from({length: 3}, (_, i) => i)
               .map((_, index) => (
                 <input
+                  key={index}
                   className={index === isActive ? "theme-on" : "theme-off"}
                   type="radio"
                   name="toggle"
                   value={index}
                   onClick={() => {
                     setIsActive(index);
-                    setThemeToggle(index);
+                    console.log(index)
+                    setTheme(index + 1);
                   }}
                 />
               ))}

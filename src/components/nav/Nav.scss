@@ -55,7 +55,7 @@
         }
         .theme-off {
           @extend %themes;
-          opacity: 0;
+          opacity: 0.2;
         }
         .theme-on {
           @extend %themes;
