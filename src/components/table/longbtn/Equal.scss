@@ -15,6 +15,6 @@
   align-items: center;
   cursor: pointer;
   &:hover {
-    background-color: hsl(6, 100%, 62%);
+    background-color: var(--toggle-hover);
   }
 }

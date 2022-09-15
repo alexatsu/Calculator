@@ -15,6 +15,6 @@
   box-shadow: 0 2px 0 1px var(--del-key-shadow);
   cursor: pointer;
   &:hover {
-    background-color: hsl(226, 38%, 64%);
+    background-color: var(--del-key-bg-hover);
   }
 }

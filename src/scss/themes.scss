@@ -5,8 +5,10 @@
   --display-bg: var(--gr-b3);
   //Keys
   --del-key-bg: var(--grayish-b);
+  --del-key-bg-hover: var(--grayish-b-hover);
   --del-key-shadow: var(--grayish-b2);
   --toggle: var(--orange);
+  --toggle-hover: var(--orange-hover);
   --equal-shadow: var(--d-orange);
   --numbers-bg: var(--grayish-l);
   --numbers-shadow: var(--grayish-l2);
@@ -23,8 +25,10 @@
   --display-bg: var(--g3);
   //Keys
   --del-key-bg: var(--teal);
+  --del-key-bg-hover: var(--teal-hover);
   --del-key-shadow: var(--d-teal);
   --toggle: var(--d-yellow);
+  --toggle-hover: var(--d-yellow-hover);
   --equal-shadow: var(--brown);
   --numbers-bg: var(--gr);
   --numbers-shadow: var(--gr2);
@@ -41,8 +45,10 @@
   --display-bg: var(--d-p3);
   //Keys
   --del-key-bg: var(--l-p);
+  --del-key-bg-hover: var(--l-p-hover);
   --del-key-shadow: var(--vl-p);
   --toggle: var(--vl-b);
+  --toggle-hover: var(--vl-b-hover);
   --equal-shadow: var(--ul-b);
   --numbers-bg: var(--vd-p);
   --numbers-shadow: var(--p);
