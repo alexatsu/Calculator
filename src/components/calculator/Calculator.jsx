@@ -3,14 +3,13 @@ import { Nav } from "../nav/Nav";
 import { Table } from "../table/Table";
 import "./Calculator.scss";
 
-export const Calculator = ({ theme, setTheme }) => {
+export const Calculator = () => {
+  
   return (
     <div className="calc">
-      <>
-        <Nav theme={theme} setTheme={setTheme} />
+        <Nav />
         <Display />
         <Table />
-      </>
     </div>
   );
 };
