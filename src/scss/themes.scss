@@ -58,3 +58,23 @@
   --white: var(--wh);
   --equal: var(--eq);
 }
+.bubblegum {
+  //Backgrounds
+  --main-bg: var(--light-pink);
+  --toggle-bg: var(--lightish-pink);
+  --display-bg: var(--faded-pink);
+  //Keys
+  --del-key-bg: var(--faded-blue);
+  --del-key-bg-hover: var(--d-blue);
+  --del-key-shadow: var(--blue);
+  --toggle: var(--washed-y);
+  --toggle-hover: var(--y3);
+  --equal-shadow: var(--y2);
+  --numbers-bg: var(--washed-pink);
+  --numbers-shadow: var(--pink);
+  //Text
+  --numbers-text: var(--b);
+  --display-text: var(--w);
+  --white: var(--wh);
+  --equal: var(--eq);
+}
