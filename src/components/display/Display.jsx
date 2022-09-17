@@ -1,10 +1,9 @@
 import "./Display.scss";
 
 import { useDispatch, useSelector } from 'react-redux';
-import displaySlice, { setDisplay } from "../../store/displaySlice";
+import { setDisplay } from "../../store/displaySlice";
 
 export const Display = () => {
-
 
   const { display } = useSelector((state) => state);
   const dispatch = useDispatch();

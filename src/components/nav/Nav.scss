@@ -46,7 +46,9 @@
         %themes {
           height: 15px;
           width: 15px;
-          appearance: none;
+          -webkit-appearance: none;
+             -moz-appearance: none;
+                  appearance: none;
           background-color: var(--toggle);
           border-radius: 50%;
           cursor: pointer;
