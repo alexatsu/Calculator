@@ -2,12 +2,13 @@ import { Btn } from "./btn/Btn";
 import { Reset } from "./longbtn/Reset";
 import { Equal } from "./longbtn/Equal";
 import "./Table.scss";
-import { decrement, increment, add7, add8, add9, deleteNum, resetCalc } from "../../store/displaySlice";
-import { useDispatch } from "react-redux";
+import { decrement, increment, add7, add8, add9, deleteNum, resetCalc, displayValue } from "../../store/displaySlice";
+import { useDispatch, useSelector } from "react-redux";
 
 export const Table = () => {
   const dispatch = useDispatch();
-
+  const result = useSelector(displayValue);
+  console.log(result)
   return (
     <div className="table">
       <div className="sm-btn">
@@ -18,7 +19,7 @@ export const Table = () => {
         <Btn value="4" />
         <Btn value="5" />
         <Btn value="6" />
-        <Btn value="+" listener={() => dispatch(increment())} />
+        <Btn value="+" listener={() => dispatch(increment(result))} />
         <Btn value="1" />
         <Btn value="2" />
         <Btn value="3" />

@@ -27,8 +27,8 @@ export const displaySlice = createSlice({
     add6(state) {
       state.display = state.display + "6";
     },
-    increment(state) {
-      state.display = state.display + 1;
+    increment(state, action) {
+      state.display = +state.display + +action.payload;
     },
     add1(state) {
       state.display = state.display + "1";
@@ -57,7 +57,6 @@ export const displaySlice = createSlice({
     resetCalc(state) {
       state.display = "";
     }
-
   },
 });
 export const { increment, decrement, add7, add8, add9, deleteNum, resetCalc } = displaySlice.actions;
