@@ -2,7 +2,7 @@ import { Btn } from "./btn/Btn";
 import { Reset } from "./longbtn/Reset";
 import { Equal } from "./longbtn/Equal";
 import "./Table.scss";
-import { decrement, increment, add7, add8, add9, deleteNum } from "../../store/displaySlice";
+import { decrement, increment, add7, add8, add9, deleteNum, resetCalc } from "../../store/displaySlice";
 import { useDispatch } from "react-redux";
 
 export const Table = () => {
@@ -29,7 +29,7 @@ export const Table = () => {
         <Btn value="x" />
       </div>
       <div className="long-btn">
-        <Reset />
+        <Reset listener={() => dispatch(resetCalc())} />
         <Equal />
       </div>
     </div>

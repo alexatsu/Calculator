@@ -1,6 +1,6 @@
 import "./Reset.scss"
-export const Reset = () => {
+export const Reset = ({listener}) => {
     return (
-        <div className="longbtn">RESET</div>
+        <div onClick={listener} className="longbtn">RESET</div>
     )
 }

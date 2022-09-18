@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const displaySlice = createSlice({
   name: "display",
   initialState: {
-    display: 0,
+    display: "",
   },
   reducers: {
     add7(state) {
@@ -54,14 +54,12 @@ export const displaySlice = createSlice({
     multiply(state) {
       state.display = state.display * 1;
     },
-    reset(state) {
-      state.display = 0;
-    },
-    // output(state) {
-    //   state.display = state.display + prevvalue;
-    // }
+    resetCalc(state) {
+      state.display = "";
+    }
+
   },
 });
-export const { increment, decrement, add7, add8, add9, deleteNum } = displaySlice.actions;
+export const { increment, decrement, add7, add8, add9, deleteNum, resetCalc } = displaySlice.actions;
 export const displayValue = state => state.display.display
 export default displaySlice.reducer;
