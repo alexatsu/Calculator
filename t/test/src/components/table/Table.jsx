@@ -1,38 +1,35 @@
-import React, { useState, useEffect } from "react"
-import { Btn } from "./btn/Btn"
-import { Reset } from "./longbtn/Reset"
-import { Equal } from "./longbtn/Equal"
-import "./Table.scss"
-import { useSelector, useDispatch } from "react-redux"
-import { assign_current_value } from "../../store/calculatorSlice"
+import React, { useState, useEffect } from "react";
+import { Btn } from "./btn/Btn";
+import { Reset } from "./longbtn/Reset";
+import { Equal } from "./longbtn/Equal";
+import "./Table.scss";
+import { useDispatch } from "react-redux";
+import { assign_current_value } from "../../store/calculatorSlice";
 
-// we are a bunch of docile, fat-bellied, people :)
-// in the end, its the fat belly that matters
 
-// i love Cevapi and Burek bro. i eat it all the time.
 
 export const Table = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   // const current_value = useSelector(current_value_selector)
 
-  const [number, setNumber] = useState("")
-  const [memory, setMemory] = useState([])
+  const [number, setNumber] = useState("");
+  const [memory, setMemory] = useState([]);
 
   const numberClickHandler = (value) => {
-    const new_number = number + value.toString()
-    setNumber(new_number)
-  }
+    const new_number = number + value.toString();
+    setNumber(new_number);
+  };
 
   const expressionHandler = (expression) => {
-    setMemory([...memory, number, expression])
-    setNumber("")
-  }
+    setMemory([...memory, number, expression]);
+    setNumber("");
+  };
 
   const equalHandler = () => {
-    const final_value = eval(memory.join("") + number)
-    console.log(final_value)
-    dispatch(assign_current_value(final_value))
-  }
+    const final_value = eval(memory.join("") + number);
+    console.log(final_value);
+    dispatch(assign_current_value(final_value));
+  };
 
   return (
     <div className="table">
@@ -79,5 +76,5 @@ export const Table = () => {
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
