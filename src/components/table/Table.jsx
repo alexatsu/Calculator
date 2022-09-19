@@ -2,55 +2,55 @@ import { Btn } from "./btn/Btn";
 import { Reset } from "./longbtn/Reset";
 import { Equal } from "./longbtn/Equal";
 import "./Table.scss";
-import { decrement, increment, add7, add8, add9, deleteNum, resetCalc, currentValue } from "../../store/displaySlice";
-import { useDispatch } from "react-redux";
-import { useState } from "react";
 
 
-export const Table = () => {
- 
-  const [number, setNumber] = useState("");
-  const [memory, setMemory] = useState([]);
-
-  const numberClickHandler = (value) => {
-    const newNum = number + value.toString();
-    setNumber(newNum);
-    console.log(newNum)
+export const Table = ({setResult, result}) => {
+  
+  const checkOps = ["/", "*", "+", "-", "."];
+  const handleClick = (value) => {
+    if (
+      (checkOps.includes(value) && result === "") ||
+      (checkOps.includes(value) && checkOps.includes(result.slice(-1)))
+    ) {
+      return;
+    }
+    setResult(result + value.toString());
   };
-  const expressionHandler = (exp) => {
-    setMemory([...memory, number, exp]);
-    setNumber("");
+  const resetCalc = () => {
+    setResult("");
+  };
+  const backspace = () => {
+    setResult(result.slice(0, -1));
+    if (result === "") return;
   };
   const equalHandler = () => {
-    const finalVal = eval(memory.join("") + number);
-    console.log(finalVal);
-    
-  }
+    if (result === "") return;
+    if (result.slice(-1) === checkOps) return;
+    setResult(eval(result.toString()));
+  };
+
   return (
     <div className="table">
-      <span className="test">{memory}</span>
-      <span className="test">{number}</span>
-      
       <div className="sm-btn">
-        <Btn value="7" listener={() => numberClickHandler(7)} />
-        <Btn value="8" listener={() => numberClickHandler(8)} />
-        <Btn value="9" listener={() => numberClickHandler(9)} />
-        <Btn value="DEL" />
-        <Btn value="4" listener={() => numberClickHandler(4)} />
-        <Btn value="5" listener={() => numberClickHandler(5)} />
-        <Btn value="6" listener={() => numberClickHandler(6)} />
-        <Btn value="+" listener={() => expressionHandler("+")} />
-        <Btn value="1" listener={() => numberClickHandler(1)} />
-        <Btn value="2" listener={() => numberClickHandler(2)} />
-        <Btn value="3" listener={() => numberClickHandler(3)} />
-        <Btn value="-" listener={() => expressionHandler("-")} />
-        <Btn value="." listener={() => expressionHandler(".")} />
-        <Btn value="0" listener={() => numberClickHandler(0)} />
-        <Btn value="/" listener={() => expressionHandler("/")} />
-        <Btn value="x" listener={() => expressionHandler("x")} />
+        <Btn value="7" listener={() => handleClick(7)} />
+        <Btn value="8" listener={() => handleClick(8)} />
+        <Btn value="9" listener={() => handleClick(9)} />
+        <Btn value="DEL" listener={backspace} />
+        <Btn value="4" listener={() => handleClick(4)} />
+        <Btn value="5" listener={() => handleClick(5)} />
+        <Btn value="6" listener={() => handleClick(6)} />
+        <Btn value="+" listener={() => handleClick("+")} />
+        <Btn value="1" listener={() => handleClick(1)} />
+        <Btn value="2" listener={() => handleClick(2)} />
+        <Btn value="3" listener={() => handleClick(3)} />
+        <Btn value="-" listener={() => handleClick("-")} />
+        <Btn value="." listener={() => handleClick(".")} />
+        <Btn value="0" listener={() => handleClick(0)} />
+        <Btn value="/" listener={() => handleClick("/")} />
+        <Btn value="x" listener={() => handleClick("*")} />
       </div>
       <div className="long-btn">
-        <Reset />
+        <Reset listener={resetCalc} />
         <Equal listener={equalHandler} />
       </div>
     </div>
