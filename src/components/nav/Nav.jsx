@@ -2,14 +2,15 @@ import { useTheme } from "../../hooks/useTheme";
 import "./Nav.scss";
 
 export const Nav = () => {
-  const { currentTheme, setCurrentTheme, themes } = useTheme();
-
-  const radioButtons = themes.map((theme) => (
+  const { currentTheme, setCurrentTheme, themes, onClickHandler } = useTheme();
+  console.log(currentTheme)
+  const radioButtons = themes.map((theme, index) => (
       <RadioButton
         key={theme}
         theme={theme}
         currentTheme={currentTheme}
         setTheme={setCurrentTheme}
+        onClickHandler={() =>onClickHandler(index)}
       />
     ));
 
@@ -29,12 +30,15 @@ export const Nav = () => {
   );
 };
 
-function RadioButton({ setTheme, currentTheme, theme }) {
+function RadioButton({ setTheme, currentTheme, theme, onClickHandler }) {
   const active = currentTheme === theme ? "theme-on" : "theme-off";
 
   const onRadioChange = (e) => {
     const newTheme = e.currentTarget.value;
     setTheme(newTheme);
+    onClickHandler();
+    console.log(currentTheme)
+
   };
 
   return (
