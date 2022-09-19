@@ -2,13 +2,13 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   display: "",
-}
+};
 export const displaySlice = createSlice({
   name: "display",
   initialState,
   reducers: {
-    currentValue(state,action) {
-      state.display = action.payload
+    currentValue(state, action) {
+      state.display = action.payload;
     },
     add7(state) {
       state.display = state.display + "7";
@@ -60,9 +60,18 @@ export const displaySlice = createSlice({
     },
     resetCalc(state) {
       state.display = "";
-    }
+    },
   },
 });
-export const { increment, decrement, add7, add8, add9, deleteNum, resetCalc, currentValue } = displaySlice.actions;
-export const displayValue = state => state.display.display
+export const {
+  increment,
+  decrement,
+  add7,
+  add8,
+  add9,
+  deleteNum,
+  resetCalc,
+  currentValue,
+} = displaySlice.actions;
+export const displayValue = (state) => state.display.display;
 export default displaySlice.reducer;

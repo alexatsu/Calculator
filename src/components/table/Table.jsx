@@ -3,9 +3,7 @@ import { Reset } from "./longbtn/Reset";
 import { Equal } from "./longbtn/Equal";
 import "./Table.scss";
 
-
-export const Table = ({setResult, result}) => {
-  
+export const Table = ({ setResult, result }) => {
   const checkOps = ["/", "*", "+", "-", "."];
   const handleClick = (value) => {
     if (
@@ -26,7 +24,7 @@ export const Table = ({setResult, result}) => {
   const equalHandler = () => {
     if (result === "") return;
     if (result.slice(-1) === checkOps) return;
-    setResult(eval(result.toString()))
+    setResult(eval(result.toString()));
   };
 
   return (

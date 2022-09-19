@@ -8,9 +8,9 @@ export const Calculator = () => {
   const [result, setResult] = useState("");
   return (
     <div className="calc">
-        <Nav />
-        <Display result={result}/>
-        <Table result={result} setResult={setResult}/>
+      <Nav />
+      <Display result={result} />
+      <Table result={result} setResult={setResult} />
     </div>
   );
 };

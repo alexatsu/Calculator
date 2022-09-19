@@ -51,7 +51,7 @@ $font: "League Spartan", sans-serif;
   --vl-p: hsl(285, 91%, 52%);
   --vl-b: hsl(176, 100%, 44%);
   --vl-b-hover: hsl(176, 100%, 50%);
-  
+
   --ul-b: hsl(177, 92%, 70%);
   --vd-p: hsl(268, 47%, 21%);
   --p: hsl(290, 70%, 36%);
@@ -61,20 +61,20 @@ $font: "League Spartan", sans-serif;
   --eq: hsl(198, 20%, 13%);
 
   //theme 4
-  --faded-pink: #FEE3EC;
-  --light-pink: #F9C5D5;
-  --lightish-pink: #F999B7;
+  --faded-pink: hsl(340, 93%, 94%);
+  --light-pink: hsl(342, 81%, 87%);
+  --lightish-pink: hsl(341, 89%, 79%);
 
-  --washed-pink: #f9afc7;
-  --pink: #F2789F;
+  --washed-pink: hsl(341, 86%, 83%);
+  --pink: hsl(341, 82%, 71%);
   //test del and reset keys
-  --faded-blue: #3178f3;
-  --blue: #1f5cc5;
-  --d-blue: #1a4fab;
+  --faded-blue: hsl(218, 89%, 57%);
+  --blue: hsl(218, 73%, 45%);
+  --d-blue: hsl(218, 74%, 39%);
   //test toggle and equal keys
-  --washed-y: #fef3a2;
-  --y2: #fcec6f;
-  --y3: #fbe754;
+  --washed-y: hsl(53, 98%, 82%);
+  --y2: hsl(53, 96%, 71%);
+  --y3: hsl(53, 95%, 66%);
 
-  --b: black;
+  --b: hsl(0, 0%, 0%);
 }
