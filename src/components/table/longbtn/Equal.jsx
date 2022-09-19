@@ -1,6 +1,6 @@
 import "./Equal.scss"
-export const Equal = ({listener}) => {
+export const Equal = ({onClick}) => {
     return (
-        <div onClick={listener} className="equal">=</div>
+        <div onClick={onClick} className="equal">=</div>
     )
 }
